@@ -3,8 +3,7 @@
   --secondary-text-color: #757575;
   --third-text-color: #ffffff;
   --accent-color: #2196f3;
-  /* --header-bgc: #ffffff; */
-  --main-bgc: /*#e5e5e5*/ #ffffff;
+  --main-bgc: #ffffff;
   --additional-bgc: #2f303a;
   --third-bgc: #f5f4fa;
   --button-bgc: #f5f4fa;
@@ -80,12 +79,8 @@ h2 {
   color: var(--primary-text-color);
 }
 
-.main {
-  background-color: var(--main-bgc);
-}
-
 .container {
-  max-width: 1200px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -151,7 +146,8 @@ span {
   background-color: var(--additional-bgc);
   text-align: center;
 
-  height: 600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
@@ -162,7 +158,6 @@ span {
   text-transform: uppercase;
   color: var(--third-text-color);
 
-  padding-top: 200px;
   margin: 0;
 }
 
@@ -183,6 +178,8 @@ span {
 
 .advantage {
   background-color: var(--main-bgc);
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .advantage-title {
@@ -198,9 +195,10 @@ span {
 .advantage-list {
   display: flex;
   justify-content: space-between;
+}
 
-  margin-top: 94px;
-  margin-bottom: 94px;
+.advantage-item {
+  width: 270px;
 }
 
 .advantage-item:not(:last-child) {
@@ -215,12 +213,16 @@ span {
 
 /*--------------------WORK--------------------*/
 
-.work-list {
-  display: flex;
+.work {
+  padding-bottom: 90px;
 }
 
 .work-title {
   margin-bottom: 50px;
+}
+
+.work-list {
+  display: flex;
 }
 
 .work-item:not(:last-child) {
@@ -231,9 +233,7 @@ span {
 
 .team {
   background-color: #f5f4fa;
-}
 
-.team-container {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -251,6 +251,11 @@ span {
   background-color: var(--main-bgc);
 }
 
+.expert {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .team-item-title {
   font-weight: 500;
   font-size: 16px;
@@ -258,26 +263,21 @@ span {
   text-align: center;
   color: var(--primary-text-color);
 
-  margin-top: 30px;
   margin-bottom: 10px;
 }
 
 .team-item-text {
   font-size: 16px;
-  line-height: 1.19x;
+  line-height: 1.19;
   text-align: center;
   color: var(--secondary-text-color);
-
-  padding-bottom: 30px;
 }
 
 /*--------------------FOOTER--------------------*/
 
 .footer {
   background-color: var(--additional-bgc);
-}
 
-.footer-container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -286,6 +286,10 @@ span {
   font-style: inherit;
 
   margin-top: 20px;
+}
+
+.adress-item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .adress-link {
@@ -334,9 +338,7 @@ span {
 }
 
 .works-item {
-  border: 1px solid var(--border-second-color);
-
-  width: calc((100% - 60px) / 3);
+  flex-basis: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
 }
@@ -349,14 +351,20 @@ span {
   margin-bottom: -30px;
 }
 
+.works-description {
+  border-right: 1px solid var(--border-second-color);
+  border-bottom: 1px solid var(--border-second-color);
+  border-left: 1px solid var(--border-second-color);
+
+  padding: 20px 24px 20px 24px;
+}
+
 .works-item-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   color: var(--primary-text-color);
 
-  margin-top: 20px;
-  margin-left: 24px;
   margin-bottom: 4px;
 }
 
@@ -364,7 +372,4 @@ span {
   font-size: 16px;
   line-height: 1.88;
   color: var(--secondary-text-color);
-
-  margin-left: 24px;
-  padding-bottom: 20px;
 }
